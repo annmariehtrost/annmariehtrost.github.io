@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ann-Marie Trost | Healthcare Technology Director</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent: #8FBC8F;
+            --text-dark: #2a3742;
+            --text-light: #5a6d7f;
+            --bg-cream: #faf8f4;
+            --bg-white: #ffffff;
+            --border-color: #e8e3da;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, #e8e3da 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(143, 188, 143, 0.1) 0%, transparent 70%);
+            animation: pulse 20s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0f1f42;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(26, 58, 92, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Impact Stats */
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+        }
+
+        .stat-card:nth-child(2) { animation-delay: 1s; }
+        .stat-card:nth-child(3) { animation-delay: 1.2s; }
+        .stat-card:nth-child(4) { animation-delay: 1.4s; }
+
+        .stat-number {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Experience Section */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-top: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--bg-cream);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-highlights li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            position: relative;
+        }
+
+        .timeline-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Capabilities Section */
+        .capabilities {
+            background: var(--bg-white);
+            padding: 6rem 2rem;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .capability-card {
+            padding: 2rem;
+            background: var(--bg-cream);
+            border-top: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top-color: var(--accent);
+        }
+
+        .capability-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .capability-items {
+            list-style: none;
+        }
+
+        .capability-items li {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .capability-items li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Education & Certifications */
+        .credentials {
+            background: linear-gradient(135deg, var(--primary) 0%, #0f1f42 100%);
+            color: white;
+            padding: 6rem 2rem;
+        }
+
+        .credentials .section-title {
+            color: white;
+        }
+
+        .credentials .section-title::after {
+            background: var(--accent);
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .credential-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 4px;
+            backdrop-filter: blur(10px);
+        }
+
+        .credential-type {
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .credential-institution {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-cream);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-text {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-value {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .contact-value a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .impact-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            .capabilities-grid,
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Ann-Marie Trost</h1>
+                <div class="hero-subtitle">Healthcare Technology Director</div>
+                <p class="hero-description">
+                    Driving digital transformation and operational excellence in MedTech. 
+                    20+ years leading complex programs with $200M+ in documented cost savings. 
+                    Cross-functional leader in AI innovation and operational excellence 
+                    across FDA-regulated environments.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/cdn-cgi/l/email-protection#e988878784889b808cc781c79d9b869a9da98e84888085c78a8684" class="btn btn-primary">Get In Touch</a>
+                    <a href="https://www.linkedin.com/in/annmarietrost" target="_blank" class="btn btn-secondary">LinkedIn Profile</a>
+                </div>
+            </div>
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <div class="stat-number">$200M+</div>
+                    <div class="stat-label">Cost Savings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Faster Time-to-Market</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$23M</div>
+                    <div class="stat-label">Digital Transformation Led</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Team Members Managed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">Leading transformation across healthcare technology and medical devices</p>
+        </div>
+        <div class="fade-in" style="max-width: 900px; margin: 0 auto 3rem auto; padding: 0 2rem; color: var(--text-light); line-height: 1.8;">
+            <p>Started career in medical underwriting and moved to telephony sales and account management, then advanced to sales & marketing for software in clinical trials for medical device companies. Transitioned to contractor roles in software development and enterprise system integration across highly regulated industries—from financial services to healthcare payer, technology, and legal service providers.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2025 - Present</div>
+                <h3 class="timeline-title">Principal Consultant</h3>
+                <div class="timeline-company">Azusa Global Consulting, Minneapolis, MN</div>
+                <p class="timeline-description">
+                    Direct full-scale business development and client delivery for Fortune 500 healthcare 
+                    and technology companies, managing complex program portfolios focused on operational efficiency.
+                </p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2022 - 2024</div>
+                <h3 class="timeline-title">Sr. Global Service Program Manager</h3>
+                <div class="timeline-company">Medtronic PLC, Minneapolis, MN</div>
+                <p class="timeline-description">
+                    Directed program management office for $14M/24-month global operations initiative, 
+                    delivering $5M cost savings across USA, Australia, New Zealand, and Japan.
+                </p>
+                <ul class="timeline-highlights">
+                    <li>Led team of project managers, workstream leads, and a director managing 75+ cross-functional members</li>
+                    <li>Coached project managers using situational leadership methodology</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2018 - 2022</div>
+                <h3 class="timeline-title">Principal Owner</h3>
+                <div class="timeline-company">Azusa Global Consulting, Minneapolis, MN</div>
+                <ul class="timeline-highlights">
+                    <li><strong>Thomson Reuters:</strong> Led enterprise Marketing and Sales transformation with 100+ stakeholders, delivering $23M in operating cost reduction</li>
+                    <li><strong>Mayo Clinic:</strong> Led innovation projects achieving 20-minute per patient time savings and 55% increase in patient satisfaction</li>
+                    <li>Orchestrated five cross-functional workstreams spanning Marketing, Sales Operations, Technology, and Analytics</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2017 - 2018</div>
+                <h3 class="timeline-title">Technology Consulting Manager</h3>
+                <div class="timeline-company">Accenture LLP, Minneapolis, MN</div>
+                <p class="timeline-description">
+                    Led technology consulting for agribusiness and pharmacy retail clients, applying 
+                    Discovery-Driven Planning to test hypotheses and course-correct large-scale initiatives.
+                </p>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-date">2014 - 2015</div>
+                <h3 class="timeline-title">Program Manager</h3>
+                <div class="timeline-company">Optum, Minneapolis, MN</div>
+                <ul class="timeline-highlights">
+                    <li>Led enterprise technology teams for new product capabilities (PaaS, SaaS, IaaS), achieving 50% reduction in manual developer support</li>
+                    <li>Led team to automate Legal and Engineering reviews with a library of Open Source Code</li>
+                    <li>Represented Software Engineering Team on Product Innovation Council</li>
+                    <li>Converted from contractor in Optum Insight to employee in Software Engineering Services 2015</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Core Capabilities</h2>
+        </div>
+        <div class="capabilities-grid">
+            <div class="capability-card fade-in">
+                <h3 class="capability-title">Program & Portfolio Leadership</h3>
+                <ul class="capability-items">
+                    <li>Enterprise Portfolio Operations (PMP, SAFe)</li>
+                    <li>Cross-Functional Team Leadership</li>
+                    <li>Budget Oversight (up to $14M)</li>
+                    <li>Governance & Risk Management</li>
+                </ul>
+            </div>
+            <div class="capability-card fade-in">
+                <h3 class="capability-title">People & Change Management</h3>
+                <ul class="capability-items">
+                    <li>Leadership of Project Managers & Directors</li>
+                    <li>Prosci Change Management</li>
+                    <li>Executive Stakeholder Communication</li>
+                    <li>Team Development & Coaching</li>
+                </ul>
+            </div>
+            <div class="capability-card fade-in">
+                <h3 class="capability-title">Operational Excellence</h3>
+                <ul class="capability-items">
+                    <li>Service Optimization</li>
+                    <li>Budget Tracking</li>
+                    <li>FDA & Legal Compliance</li>
+                    <li>Multi-Vendor Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section class="credentials">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Education & Certifications</h2>
+        </div>
+        <div class="credentials-grid">
+            <div class="credential-card fade-in">
+                <div class="credential-type">Advanced Training</div>
+                <div class="credential-name">AI for Strategic Decision Making</div>
+                <div class="credential-institution">Section School, 2025</div>
+            </div>
+            <div class="credential-card fade-in">
+                <div class="credential-type">Certification</div>
+                <div class="credential-name">SAFe® Scaled Agile Leader</div>
+                <div class="credential-institution">Accenture, 2018</div>
+            </div>
+            <div class="credential-card fade-in">
+                <div class="credential-type">Certification</div>
+                <div class="credential-name">PMP® Project Management</div>
+                <div class="credential-institution">Project Management Institute</div>
+            </div>
+            <div class="credential-card fade-in">
+                <div class="credential-type">Certification</div>
+                <div class="credential-name">Prosci® Change Management</div>
+                <div class="credential-institution">Prosci, 2019</div>
+            </div>
+            <div class="credential-card fade-in">
+                <div class="credential-type">Graduate Certificate</div>
+                <div class="credential-name">Public Relations</div>
+                <div class="credential-institution">University of St. Thomas, 2007</div>
+            </div>
+            <div class="credential-card fade-in">
+                <div class="credential-type">Bachelor of Arts</div>
+                <div class="credential-name">International Business Management</div>
+                <div class="credential-institution">Hamline University</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-content fade-in">
+            <h2 class="contact-title">Let's Connect</h2>
+            <p class="contact-text">
+                Open to Director and Senior Director opportunities in MedTech. 
+                Let's discuss how my experience in digital transformation and 
+                operational excellence can drive results for your organization.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">
+                        <a href="/cdn-cgi/l/email-protection#1978777774786b707c3771376d6b766a6d597e74787075377a7674"><span class="__cf_email__" data-cfemail="0f6e6161626e7d666a2167217b7d607c7b4f68626e6663216c6062">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">(952) 649-0275</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-label">Location</div>
+                    <div class="contact-value">Minneapolis, MN</div>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a href="https://www.linkedin.com/in/annmarietrost" target="_blank" class="btn btn-primary">
+                    View LinkedIn Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', 
