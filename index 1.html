@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ann-Marie Trost | Healthcare AI &amp; Digital Transformation Leader</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #2c3e50;
+      background: #f8f9fa;
+      line-height: 1.6;
+    }
+
+    a { color: #2563a8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── STICKY NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #1a3a5c;
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      padding: 14px 28px;
+      font-size: 0.88rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    nav a:hover { background: rgba(255,255,255,0.1); color: white; text-decoration: none; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a3a5c 0%, #2563a8 100%);
+      color: white;
+      padding: 60px 40px 50px;
+    }
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .header-photo {
+      flex-shrink: 0;
+    }
+    .header-photo img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid rgba(255,255,255,0.5);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .header-text { flex: 1; min-width: 280px; }
+    .header-text h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .header-text .title {
+      font-size: 1.05rem;
+      opacity: 0.88;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .header-text .summary {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      opacity: 0.95;
+      margin-bottom: 24px;
+    }
+    .header-links { display: flex; gap: 14px; flex-wrap: wrap; }
+    .header-links a {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-size: 0.92rem;
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .header-links a:hover { background: rgba(255,255,255,0.28); text-decoration: none; }
+
+    /* ── STATS ── */
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #1a3a5c;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat {
+      flex: 1;
+      min-width: 180px;
+      padding: 24px 20px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      color: white;
+    }
+    .stat:last-child { border-right: none; }
+    .stat .number { font-size: 1.9rem; font-weight: 700; color: #7ec8e3; }
+    .stat .label { font-size: 0.8rem; opacity: 0.8; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat .anchor { font-size: 0.75rem; opacity: 0.55; margin-top: 2px; font-style: italic; }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 50px 24px; }
+
+    section { margin-bottom: 56px; }
+    section h2 {
+      font-size: 1.35rem;
+      color: #1a3a5c;
+      border-bottom: 3px solid #2563a8;
+      padding-bottom: 8px;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    section .section-intro {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-item { margin-bottom: 36px; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 2px;
+    }
+    .exp-header h3 { font-size: 1.08rem; color: #1a3a5c; font-weight: 700; }
+    .exp-dates { font-size: 0.9rem; color: #2563a8; font-weight: 600; white-space: nowrap; }
+    .exp-org { font-size: 0.93rem; color: #555; font-style: italic; margin-bottom: 10px; }
+    .exp-summary { font-size: 0.93rem; color: #444; margin-bottom: 10px; }
+    .exp-item ul { padding-left: 20px; }
+    .exp-item ul li { font-size: 0.93rem; color: #444; margin-bottom: 6px; }
+    .exp-item ul li strong { color: #1a3a5c; }
+    .earlier-career {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      border-left: 3px solid #2563a8;
+      padding-left: 14px;
+      margin-top: 8px;
+    }
+
+    /* ── CAPABILITIES ── */
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+    .cap-card {
+      background: white;
+      border-radius: 10px;
+      padding: 22px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-top: 3px solid #2563a8;
+    }
+    .cap-card h3 { font-size: 0.93rem; color: #1a3a5c; margin-bottom: 12px; font-weight: 700; }
+    .cap-card ul { padding-left: 16px; }
+    .cap-card ul li { font-size: 0.87rem; color: #555; margin-bottom: 5px; }
+
+    /* ── EDUCATION ── */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .edu-card {
+      background: white;
+      border-radius: 8px;
+      padding: 18px 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .edu-card .edu-type { font-size: 0.73rem; color: #2563a8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .edu-card .edu-title { font-size: 0.93rem; font-weight: 600; color: #1a3a5c; margin-bottom: 2px; }
+    .edu-card .edu-org { font-size: 0.83rem; color: #666; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a3a5c;
+      color: white;
+      text-align: center;
+      padding: 50px 24px;
+    }
+    footer h2 { font-size: 1.45rem; margin-bottom: 10px; }
+    footer .footer-sub {
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 0.97rem;
+      line-height: 1.75;
+    }
+    .contact-grid { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; }
+    .contact-item .contact-label { font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.8px; opacity: 0.6; margin-bottom: 4px; }
+    .contact-item a { color: #7ec8e3; font-size: 0.97rem; }
+    .contact-item p { color: white; font-size: 0.97rem; }
+    .linkedin-btn {
+      display: inline-block;
+      background: #2563a8;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      transition: background 0.2s;
+      text-decoration: none;
+    }
+    .linkedin-btn:hover { background: #1e4f8a; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .header-inner { flex-direction: column; text-align: center; }
+      .header-links { justify-content: center; }
+      .header-text h1 { font-size: 1.9rem; }
+      .stat { min-width: 140px; }
+      nav a { padding: 12px 14px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="about">
+    <div class="header-inner">
+      <div class="header-photo">
+        <img src="Ann-Marie_Trost_8587_WEBSIZE.jpg" alt="Ann-Marie Trost" />
+      </div>
+      <div class="header-text">
+        <h1>Ann-Marie Trost</h1>
+        <p class="title">Healthcare AI &amp; Digital Transformation Leader</p>
+        <p class="summary">
+          I help organizations move faster, cut waste, and deliver better outcomes through
+          AI-enabled digital transformation. 20+ years of cross-functional program leadership
+          delivering measurable impact across healthcare, financial services, and regulated industries.
+        </p>
+        <div class="header-links">
+          <a href="mailto:annmarie.h.trost@gmail.com">Get In Touch</a>
+          <a href="https://www.linkedin.com/in/annmarietrost" target="_blank">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="number">$23M</div>
+      <div class="label">Digital Transformation Led</div>
+      <div class="anchor">Thomson Reuters</div>
+    </div>
+    <div class="stat">
+      <div class="number">$5M</div>
+      <div class="label">Cost Savings Delivered</div>
+      <div class="anchor">Medtronic</div>
+    </div>
+    <div class="stat">
+      <div class="number">100+</div>
+      <div class="label">Team Members Led</div>
+      <div class="anchor">Thomson Reuters</div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <p class="section-intro">Leading transformation across healthcare technology and enterprise operations</p>
+
+      <!-- Azusa 2025 -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Principal Consultant</h3>
+          <span class="exp-dates">2025 – Present</span>
+        </div>
+        <p class="exp-org">Azusa Global Consulting &mdash; Minneapolis, MN</p>
+        <ul>
+          <li>Completed AI strategy coursework through Section School, including <em>AI for Strategic Decision Making</em> and <em>ROI of Gen AI</em>, deepening expertise in healthcare AI transformation and digital innovation.</li>
+          <li>Women in Product Sr. Leaders Circle &mdash; virtual audience member for roundtables on AI integration, product innovation, and digital transformation strategy.</li>
+          <li>Active in MedTechWomen and MN chapter of PDMA; conducting ongoing business development for consulting practice focused on healthcare digital transformation.</li>
+        </ul>
+      </div>
+
+      <!-- Medtronic -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Sr. Global Program Manager / Sr. Manager</h3>
+          <span class="exp-dates">2022 – 2024</span>
+        </div>
+        <p class="exp-org">Medtronic PLC &mdash; Minneapolis, MN</p>
+        <p class="exp-summary">Directed program management office for $14M/24-month global operations initiative, delivering $5M cost savings across USA, Australia, New Zealand, and Japan.</p>
+        <ul>
+          <li>Led workflow automation and remote monitoring services program at Medtronic, delivering $5M in operational cost savings.</li>
+          <li>Leveraged Aha! Product Dashboards for executive transparency and team alignment, providing portfolio visibility to senior leadership.</li>
+          <li>Directed team of project managers, workstream leads, and a director managing 75+ cross-functional members.</li>
+          <li>Coached project managers using situational leadership methodology; served as volunteer leader for Asian Impact at Medtronic LeanIn Circle.</li>
+        </ul>
+      </div>
+
+      <!-- Azusa 2018 -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Principal Owner</h3>
+          <span class="exp-dates">2018 – 2022</span>
+        </div>
+        <p class="exp-org">Azusa Global Consulting, LLC &mdash; Minneapolis, MN</p>
+        <ul>
+          <li><strong>Thomson Reuters:</strong> Led enterprise Marketing and Sales transformation with 100+ stakeholders, delivering $23M in operating cost reduction. Orchestrated five cross-functional workstreams spanning Marketing, Sales Operations, Technology, and Analytics.</li>
+          <li><strong>Mayo Clinic:</strong> Led innovation projects achieving 20-minute per patient time savings.</li>
+          <li>Established program governance frameworks and steering committee mechanisms to track progress, manage resources, and drive change adoption strategies.</li>
+        </ul>
+      </div>
+
+      <!-- Accenture -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Technology Consulting Manager</h3>
+          <span class="exp-dates">2017 – 2018</span>
+        </div>
+        <p class="exp-org">Accenture LLP &mdash; Minneapolis, MN</p>
+        <p class="exp-summary">Led technology consulting for agribusiness and pharmacy retail clients, applying Discovery-Driven Planning to test hypotheses and course-correct large-scale initiatives.</p>
+      </div>
+
+      <!-- Azusa 2016 -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Principal Owner</h3>
+          <span class="exp-dates">2016 – 2017</span>
+        </div>
+        <p class="exp-org">Azusa Global Consulting, LLC &mdash; Minneapolis, MN</p>
+        <ul>
+          <li>Sr. Business Project Manager for Salesforce uplift at Optum for HouseCalls program.</li>
+          <li>Sr. IT Project Manager for Salesforce chat migration at national bank with $800K budget as part of $14M Strategic Initiative.</li>
+          <li>Migrated legacy platforms to Salesforce for automated call center, campaign tracker, and operations efficiency.</li>
+        </ul>
+      </div>
+
+      <!-- UHG -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <h3>Program Manager</h3>
+          <span class="exp-dates">2015</span>
+        </div>
+        <p class="exp-org">UnitedHealth Group &mdash; Minneapolis, MN</p>
+        <p class="exp-summary">Led enterprise technology teams for Platform as a Service, Software as a Service, and Infrastructure as a Service capabilities, achieving 50% reduction in manual developer support.</p>
+      </div>
+
+      <!-- Earlier career callout -->
+      <p class="earlier-career">
+        Earlier career: Medicare program management at UnitedHealthcare, Prime Therapeutics, and Express Scripts &mdash; leading teams of 25&ndash;50 with budgets up to $860K, delivering 40% savings in drug program costs.
+      </p>
+
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section id="capabilities">
+      <h2>Core Capabilities</h2>
+      <div class="cap-grid">
+        <div class="cap-card">
+          <h3>Program &amp; Portfolio Leadership</h3>
+          <ul>
+            <li>Enterprise Portfolio Operations (PMP, SAFe)</li>
+            <li>Cross-Functional Team Leadership</li>
+            <li>Budget Oversight (up to $14M)</li>
+            <li>Governance &amp; Risk Management</li>
+          </ul>
+        </div>
+        <div class="cap-card">
+          <h3>Digital Transformation &amp; AI</h3>
+          <ul>
+            <li>AI Implementation &amp; Workflow Automation</li>
+            <li>Healthcare Technology Platforms</li>
+            <li>Digital Health Services</li>
+            <li>Technology Implementation</li>
+          </ul>
+        </div>
+        <div class="cap-card">
+          <h3>People &amp; Change Management</h3>
+          <ul>
+            <li>Leadership of Project Managers &amp; Directors</li>
+            <li>Prosci Change Management</li>
+            <li>Executive Stakeholder Communication</li>
+            <li>Team Development &amp; Coaching</li>
+          </ul>
+        </div>
+        <div class="cap-card">
+          <h3>Operational Excellence</h3>
+          <ul>
+            <li>Benefits Realization &amp; Impact Tracking</li>
+            <li>Vendor &amp; Stakeholder Management</li>
+            <li>Platform Operations &amp; Service Delivery</li>
+            <li>Process Optimization &amp; Efficiency</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education &amp; Certifications</h2>
+      <div class="edu-grid">
+
+        <div class="edu-card">
+          <div class="edu-type">Advanced Training</div>
+          <div class="edu-title">AI for Strategic Decision Making</div>
+          <div class="edu-org">Section School, 2025</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Advanced Training</div>
+          <div class="edu-title">ROI of Gen AI</div>
+          <div class="edu-org">Section School, 2023</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Advanced Training</div>
+          <div class="edu-title">Lean Portfolio Management</div>
+          <div class="edu-org">Scrum Alliance, 2023</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Advanced Training</div>
+          <div class="edu-title">Make Better Decisions</div>
+          <div class="edu-org">Maven / Thinking in Bets Annie Duke, 2024</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Advanced Training</div>
+          <div class="edu-title">How Women Rise Workshop</div>
+          <div class="edu-org">Omega Institute, 2018</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Certification</div>
+          <div class="edu-title">SAFe&reg; Scaled Agile Leader</div>
+          <div class="edu-org">Accenture, 2018</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Certification</div>
+          <div class="edu-title">Prosci&reg; Change Management</div>
+          <div class="edu-org">Prosci, 2019</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Certification</div>
+          <div class="edu-title">PMP&reg; Project Management</div>
+          <div class="edu-org">Project Management Institute</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Certification</div>
+          <div class="edu-title">Certified Scrum Master (CSM)</div>
+          <div class="edu-org">Scrum Alliance</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Graduate Certificate</div>
+          <div class="edu-title">Public Relations</div>
+          <div class="edu-org">University of St. Thomas, 2007</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Graduate Research</div>
+          <div class="edu-title">East Asian Area Studies</div>
+          <div class="edu-org">University of Southern California</div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-type">Bachelor of Arts</div>
+          <div class="edu-title">International Business Management</div>
+          <div class="edu-org">Hamline University</div>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /container -->
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <h2>Let&#x2019;s Talk</h2>
+    <p class="footer-sub">
+      If you&#x2019;re working on a healthcare AI or digital transformation challenge,
+      I&#x2019;m always willing to share what I&#x2019;ve learned. Reach out &mdash;
+      I&#x2019;d enjoy the conversation.
+    </p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-label">Email</div>
+        <a href="mailto:annmarie.h.trost@gmail.com">annmarie.h.trost@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <a href="tel:+19526490275">952-649-0275</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <p>Minneapolis, MN</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">LinkedIn</div>
+        <a href="https://www.linkedin.com/in/annmarietrost" target="_blank">linkedin.com/in/annmarietrost</a>
+      </div>
+    </div>
+    <a class="linkedin-btn" href="https://www.linkedin.com/in/annmarietrost" target="_blank">Connect on LinkedIn</a>
+  </footer>
+
+</body>
+</html>
