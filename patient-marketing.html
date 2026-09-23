@@ -48,18 +48,16 @@
   }
 
   .hero{padding-block: 48px 32px; border-bottom:1px solid var(--panel-line);}
-    <div class="hero-top">
-      <div>
-        <h1 class="name">ANN-MARIE TROST</h1>
-        <p class="role-line">Patient &amp; Consumer Marketing Leader</p>
-        <p class="role-sub">Enterprise program discipline applied to patient and consumer marketing — turning clinician and patient experience into launch-ready engagement strategy across MedTech and healthcare payer ecosystems.</p>
-      </div>
-      <div class="contact-block">
-        <span>annmarie.h.trost@azusaglobal.com</span>
-        <a href="https://www.linkedin.com/in/annmarietrost" target="_blank" rel="noopener">linkedin.com/in/annmarietrost</a>
-        <span>952-649-0275 · Minneapolis, MN · Open to relocation</span>
-      </div>
-    </div>
+  .hero-top{display:flex; gap:24px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;}
+  .hero-id{display:flex; gap:20px; align-items:center;}
+  .headshot{width:88px; height:88px; border-radius:50%; object-fit:cover; border:2px solid var(--teal); flex-shrink:0;}
+  .name{font-size:clamp(40px,7vw,64px); line-height:0.95; margin:0; text-wrap:balance;}
+  .role-line{font-family:'DM Sans', sans-serif; font-weight:700; font-size:17px; color:var(--ink); margin:10px 0 4px 0;}
+  .role-sub{color:var(--ink-dim); font-size:15px; max-width:56ch; margin:0;}
+  .contact-block{text-align:right; font-size:14px; color:var(--ink-dim); display:flex; flex-direction:column; gap:4px; min-width:220px;}
+  .contact-block a{text-decoration:none; font-weight:500;}
+  .contact-block a:hover{text-decoration:underline;}
+
   .stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:36px;}
   .stat{background:var(--panel); border:1px solid var(--panel-line); border-top:3px solid var(--teal); padding:16px 14px;}
   .stat:nth-child(2){border-top-color:var(--amber);}
@@ -116,190 +114,8 @@
 
   <header class="hero">
     <div class="hero-top">
-      <div>
-        <h1 class="name">ANN-MARIE TROST</h1>
-        <p class="role-line">Patient &amp; Consumer Marketing Leader</p>
-        <p class="role-sub">Enterprise program discipline applied to patient and consumer marketing — turning clinician and patient experience into launch-ready engagement strategy across MedTech and healthcare payer ecosystems.</p>
-      </div>
-      <div class="contact-block">
-        <span>annmarie.h.trost@azusaglobal.com</span>
-        <span>952-649-0275 · Minneapolis, MN · Open to relocation</span>
-      </div>
-    </div>
-
-    <div class="stat-row">
-      <div class="stat">
-        <div class="stat-num">1.3M</div>
-        <div class="stat-label">Member enrollment driven by Medicare platform &amp; campaign modernization — Optum</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">$23M</div>
-        <div class="stat-label">Cost reduction — Thomson Reuters customer journey transformation</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">75+</div>
-        <div class="stat-label">Team members led on an AI-enabled patient monitoring &amp; field launch program</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">25+</div>
-        <div class="stat-label">Years leading patient- and consumer-facing programs</div>
-      </div>
-    </div>
-  </header>
-
-  <section>
-    <p class="eyebrow">Professional Background</p>
-    <h2 class="section-title">Marketing that starts with the patient</h2>
-    <p class="lede">
-      25+ years leading patient- and consumer-facing programs across MedTech and healthcare payer ecosystems —
-      customer/patient journey design, marketing and sales transformation, and national field launch execution.
-      Pairs enterprise program discipline with passion for the patient and clinician experience, translating
-      both into engagement strategy built for real patients, focused on outcomes and quality of life.
-    </p>
-  </section>
-
-  <section>
-    <p class="eyebrow">Experience</p>
-    <h2 class="section-title">Recent Roles</h2>
-
-    <div class="role">
-      <div class="role-meta">
-        <span class="org">Azusa Global Consulting</span>
-        Principal Owner Consultant<br>Jan 2025 – Present
-      </div>
-      <div>
-        <p class="role-title">Independent advisory on program governance to enterprise businesses and programs to increase AI adoption and innovation to improve lives.</p>
-      </div>
-    </div>
-
-    <div class="role">
-      <div class="role-meta">
-        <span class="org">Medtronic</span>
-        Sr. Program Manager, Patient Care Systems / Sr. Manager<br>Sep 2022 – May 2024
-      </div>
-      <div>
-        <p class="role-title">Foundational AI Model &amp; Call Center Centralization with Workflow Optimization</p>
-        <ul>
-          <li>Directed customer journey mapping for remote patient monitoring services, simplifying the clinician journey to surface only what's needed and speed service to patients.</li>
-          <li>Managed the downstream marketing workstream for the national field launch of centralized services to the U.S. sales force, including project planning and field-readiness training coordination.</li>
-          <li>Led <b>10 workstreams and 75+ team members</b> delivering the AI-enabled program, resulting in <b>$5M/year in cost avoidance</b>; built and chaired a VP-level steering committee, including Sr. Directors of Patient Care Systems.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="role">
-      <div class="role-meta">
-        <span class="org">Azusa Global Consulting LLC</span>
-        Principal Owner<br>Dec 2018 – Aug 2022
-      </div>
-      <div>
-        <p class="role-title">Customer &amp; Patient Experience Transformation</p>
-        <ul>
-          <li><b>Thomson Reuters:</b> led the shift of the customer journey from rep-enabled to AI-driven self-service across 5 cross-functional workstreams and 100+ stakeholders, delivering <b>$23M in operating cost reduction</b>.</li>
-          <li><b>Mayo Clinic:</b> led innovation projects improving the patient experience, delivering a 20-minute per-patient time savings and a 55% increase in patient satisfaction.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="role">
-      <div class="role-meta">
-        <span class="org">Accenture</span>
-        Technology Consulting Manager<br>Jun 2017 – Oct 2018
-      </div>
-      <div>
-        <p class="role-title">Life Sciences &amp; Products Practice</p>
-        <ul>
-          <li>Led a Salesforce mobile sales-enablement implementation for a global agribusiness client, now operating at global scale.</li>
-          <li>Founded a Women's ERG sub-group book club with a focus on AI and the future of work; mentored junior consultants and project managers.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="role">
-      <div class="role-meta">
-        <span class="org">Optum / UnitedHealth Group</span>
-        IT Enterprise Program Manager<br>Oct 2014 – Nov 2015
-      </div>
-      <div>
-        <p class="role-title">Consumer Platform Modernization — HouseCalls Medicare Program</p>
-        <ul>
-          <li>Led platform migration to Salesforce-based, cloud-enabled solutions supporting care coordination and campaign management, driving <b>1.3M member enrollment</b> for a national Medicare population program.</li>
-          <li>Converted from contract to full-time as one of two Director-track positions offered after performance as Sr. Project Manager and Scrum Master.</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="role-earlier">
-      <b>Foundations in sales &amp; marketing leadership (1998–2014):</b> Built a track record in quota-carrying sales and account management at AT&amp;T (SVP Award, $1.2M contract sale) and Qwest (50-account portfolio in competitive enterprise telecom), then advanced into sales and marketing leadership as Director of Sales and Marketing at Acumen Healthcare, an early-stage clinical trials software company in Plymouth, MN. Pivoted from selling technology solutions to delivering them, spending 12+ years as an independent Business Analyst / Sr. Project Manager consultant to Fortune 500 clients across healthcare payer and financial services.
-    </p>
-  </section>
-
-  <section>
-    <p class="eyebrow">Leadership &amp; Communication</p>
-    <h2 class="section-title">Teaching, content &amp; team leadership</h2>
-    <div class="lead-grid">
-      <div class="lead-card">
-        <p class="org">Medtronic</p>
-        <p>Built and delivered Scrum training to a cross-functional team; chaired a VP-level steering committee for a 10-workstream, 75+ person program.</p>
-      </div>
-      <div class="lead-card">
-        <p class="org">Accenture</p>
-        <p>Founded a Women's ERG book club on AI and the future of work; presented new-hire orientation content firmwide.</p>
-      </div>
-      <div class="lead-card">
-        <p class="org">Medtronic</p>
-        <p>Co-led the Asian Impact ERG leadership circle and volunteered as a mentor through Medtronic Young Professionals.</p>
-      </div>
-      <div class="lead-card">
-        <p class="org">Acumen Healthcare</p>
-        <p>Led sales and marketing as Director, managing external vendors on marketing materials and product demos and representing the company at Medical Alley industry events.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <p class="eyebrow">Scope</p>
-    <h2 class="section-title">Where the experience aligns</h2>
-    <div class="cap-grid">
-      <div class="cap">
-        <h3>Patient &amp; Consumer Marketing</h3>
-        <p>Led the marketing workstream for a national field launch of AI-enabled patient monitoring services and directed customer journey design for remote monitoring.</p>
-      </div>
-      <div class="cap">
-        <h3>Marketing &amp; Sales Transformation</h3>
-        <p>Shifted a customer journey from rep-enabled to AI-driven self-service and modernized campaign management driving 1.3M member enrollment.</p>
-      </div>
-      <div class="cap">
-        <h3>Program &amp; Launch Leadership</h3>
-        <p>PMP and SAFe-certified; led a 10-workstream, 75+ person AI program with VP-level governance and stage-gates.</p>
-      </div>
-      <div class="cap">
-        <h3>Content, Training &amp; Facilitation</h3>
-        <p>Built and delivered Scrum training, new-hire onboarding content, and an AI/future-of-work education series — directly transferable to patient and field education programs.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <p class="eyebrow">Certifications &amp; Education</p>
-    <h2 class="section-title">Credentials</h2>
-    <div class="cred-row">
-      <span class="pill">PMP</span>
-      <span class="pill">SAFe 4.5 Agilist</span>
-      <span class="pill">CSM</span>
-      <span class="pill">Prosci ADKAR</span>
-    </div>
-    <p class="edu">
-      <b>Hamline University</b> — B.A., International Business Management (Hamline Leadership Scholar)<br>
-      <b>University of St. Thomas, Opus College of Business</b> — Graduate Certificate, Public Relations &amp; Business Communication
-    </p>
-  </section>
-
-  <footer>
-    <span>Ann-Marie Trost · Minneapolis, MN</span>
-    <span><a href="https://annmariehtrost.github.io" target="_blank" rel="noopener">annmariehtrost.github.io</a></span>
-  </footer>
-
-</div>
-</body>
-</html>
+      <div class="hero-id">
+        <img class="headshot" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...[photo data — full string is in your actual file]...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" alt="Ann-Marie Trost">
+        <div>
+          <h1 class="name">ANN-MARIE TROST</h1>
+          <p
